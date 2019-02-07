@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<style type="text/css">
+.all{
+display: grid;
+grid-template-columns: 2fr repeat(2, 1fr);
+grid-auto-rows: minmax(100px);
+
+
+}	
+.first{
+grid-column: 1 / 2;
+background: yellow;
+grid-row: 1 / 5;
+grid-template-columns: 1fr repeat(2, 1fr);
+grid-auto-rows: minmax(100px);
+
+text-indent: 1px;
+border: solid 2px;
+text-align:justify;
+padding:20px;
+}
+.firstone{
+background:pink;
+height:30px;
+width:100px;
+margin:10% 80% ;
+padding:2px;
+}
+.second{
+grid-column: 2/4;
+grid-row: 1/2;
+border: solid 2px;
+display: grid;
+}
+.secondone{
+grid-column: 2 / 3;
+grid-row: 1 / 2;
+background: pink;
+text-align:center;
+border: solid 2px;
+
+}
+.secondtwo{
+grid-column: 3/4;
+grid-row: 1/2;
+background: #7CFC00;
+text-align:center;
+border: solid 2px;
+}
+.secondthree{
+grid-column: 2/4;
+grid-row: 2/3;
+background: blue;
+text-align:center;
+border: solid 2px;
+}
+.secondfour{
+grid-column: 2/3;
+grid-row: 3/5;
+background: #CD5C5C;
+border: solid 2px;
+}
+.secondfive{
+grid-column: 3/4;
+grid-row: 3/4;
+background: #48D1CC;
+text-align:justify;
+border: solid 2px;
+padding:30px;
+}
+.secondsix{
+grid-column: 3/4;
+grid-row: 4/5;
+background: #20B2AA;
+text-align:justify;
+border: solid 2px;
+padding:30px;
+}
+.im{
+margin:10px;
+float:left;
+
+}
+.im1{
+margin:15px 15px 15px 15px;
+height:300px;
+width:250px;
+}
+@media screen and (max-width: 900px)
+{
+.all{
+display:grid;
+grid-auto-rows: minmax(100px, auto);
+grid-template-columns:2fr 2fr;
+
+}
+.second{
+display:grid;
+grid-column:1/3;
+grid-row:1/5;
+grid-template-columns: repeat(2, 1fr);
+grid-auto-rows: minmax(100px, auto);
+
+
+}
+.secondone{
+grid-column:1/2;
+grid-row:1/2;
+background:#FFD700;	
+}
+.secondtwo{
+grid-column:2/3;
+grid-row:1/2;
+background:#9ACD32;
+}
+.secondthree{
+grid-column:1/3;
+grid-row:2/3;
+background:#8FBC8F;
+}
+.secondfour{
+grid-column:1/2;
+grid-row:3/5;
+background:#9ACD32;	
+}
+.secondfive{
+grid-column:2/3;
+grid-row:3/4;
+background:#FFC0CB;
+}
+.secondsix{
+grid-row:4/5;
+grid-column:2/3;
+background:#B0C4DE;
+
+}
+.first{
+display:grid;
+grid-column:1/3;
+grid-row:5/6;
+grid-template-columns: 1fr ;
+grid-auto-rows: minmax(100px);
+
+}
+.firstone{
+background:pink;
+height:30px;
+width:100px;
+margin:10% 80% ;
+padding:2px;
+}
+
+.im{
+margin:10px;
+float:left;
+
+}
+.im1{
+margin:15px 15px 15px 15px;
+height:500px;
+width:450px;
+}
+
+
+
+
+
+
+
+}
+</style>
+</head>
+
+<body>
+<div class="all">
+	<div class="first">
+		<h1>Я - заголовок 1 рівня</h1>
+		<p><img class="im" src="https://brjunetka.ru/wp-content/uploads/2012/10/paris-7.jpg" height="100px" align="top">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<div class="firstone">Read more-></div>
+	</div>
+	<div class="second">
+		<div class="secondone"><h1>Main</h1></div>
+		<div class="secondtwo"><h1>News</h1></div>
+		<div class="secondthree"><h2>Я - заголовок 2 уровня</h2></div>
+		<div class="secondfour"><img class="im1" src="https://brjunetka.ru/wp-content/uploads/2012/10/paris-7.jpg" height="100px" ></div>
+		<div class="secondfive">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+		<div class="secondsix">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+		
+	</div>
+</div>
+</body>
+</html>
