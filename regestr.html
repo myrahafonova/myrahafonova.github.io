@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" media="screen" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+</head>
+<body>
+	 <script>
+        var myWindow;
+        
+        function opWin() {
+            var seco = regestr.Patronymic.value;
+            var fir = regestr.name.value;
+            var lang = regestr.lang.value;
+            var mathim = regestr.mathim.value;
+            var value1 = parseInt(mathim) + parseInt(lang);
+          myWindow = window.open("", "myWindow", "width=250,height=160");
+          myWindow.document.write("Name"+": "+fir, "<br>");
+          myWindow.document.write("Patronymic"+": "+seco, "<br>");
+          myWindow.document.write("summa = "+value1);
+          
+        }
+        
+      
+        </script>
+
+    <form name="regestr">
+        Name<br>
+        <input type="text" name="name" size=”18” maxlength=”25” value="" ><br>
+        Patronymic:<br>
+        <input type="text" name="Patronymic" size=”22” maxlength=”25” value="" ><br> 
+        Date birthday: <br>
+        <input type="date" value="2018-07-22" min="2018-01-01" max="2018-12-31"> <br>
+        Adress:<br>
+        <input type="text" name="adress" size=”20” maxlength=”25” value="" ><br>
+        Number:<br>
+        <input type="text" name="Number" size=”20” maxlength=”25” value="" ><br>
+         ukrainian language score:<br>
+        <input type="text" id="lang" size=”20” maxlength=”25” value="" ><br>
+        math score:<br>
+        <input type="text" id="mathim" size=”20” maxlength=”25” value="" ><br>
+       
+        Место проживания: <br>
+         <input type="checkbox" name="selection" value="1" checked>city <br>
+         <input type="checkbox" name="selection" value="2" checked>village <br>
+         
+         sex:<br>
+         <input type="radio" name="gendr" value="1" checked> girl <br>
+         <input type="radio" name="gender" value="2" > boy <br>
+         
+        </form>   
+        
+        <button onclick="opWin()">confirm</button>
+</body>
+</html>
