@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" >
+<title>Фізика</title>
+<link href="style2.css" rel="stylesheet">
+</head>
+
+<body>
+ </div>
+        <div id="content_container">
+       	  <script type="text/javascript">
+
+var title = 'Перевірка знань по темі</br> Молекулярна фізика і термодинаміка';
+
+var subtitle = "Тут ви зможете перевірити свої знання";
+
+var questions=[
+{
+	text: "Парціальний тиск -",
+	answers: ["це тиск, який створював би газ, якби він займав даний об’єм сам.",
+		  "це тиск, який створював би сам, якби він займав даний газ",
+		  "це маленьий тиск"],
+	correctAnswer: 0
+},
+{
+	text: "Закон Шарля -",
+	answers: ["ізохорний процес",
+		  "ізобарний процес",
+		  "ізотермічний процес"],
+	correctAnswer: 0
+},
+{
+	text: "Закон Бойла-Маріотта -",
+	answers: ["ізохорний процес",
+		  "ізотермічний процес",
+		  "ізобарний процес"],
+	correctAnswer: 1
+},
+{
+	text: "Закон Гей-Люссака -",
+	answers: ["ізобарний процес",
+		  "ізохорний процес",
+		  "ізотермічний процес"],
+	correctAnswer: 0
+},
+{
+	text: "Ідеальний газ -",
+	answers: ["без домішок",
+		  "легий газ",
+		  "це теоретична модель газу, в якому частинки (атоми, молекули) розглядають як геометричні точки, які не мають об’єму і не взаємодіють одні з одними."],
+	correctAnswer: 2
+},
+{
+	text: "Ізотерма -",
+	answers: ["графік залежності між параметрами даної маси газу за сталої температури.",
+		  "графік залежності між параметрами стану даної маси газу за сталого тискy",
+		  "графік залежності між параметрами стану даної маси газу при сталому об’ємі"],
+	correctAnswer: 0
+},
+{
+	text: "Ізобара -",
+	answers: ["графік залежності між параметрами даної маси газу за сталої температури.",
+		  "графік залежності між параметрами стану даної маси газу за сталого тискy",
+		  "графік залежності між параметрами стану даної маси газу при сталому об’ємі"],
+	correctAnswer: 1
+},
+{
+	text: "Ізохора -",
+	answers: ["графік залежності між параметрами даної маси газу за сталої температури.",
+		  "графік залежності між параметрами стану даної маси газу за сталого тискy",
+		  "графік залежності між параметрами стану даної маси газу при сталому об’ємі"],
+	correctAnswer: 2
+},
+{
+	text: "Закон Дальтона -",
+	answers: ["тиск суміші газів дорівнює сумі парціальних тисків складових газів",
+		  "температура суміші газів дорівнює сумі парціальних температур складових газів",
+		  "об*єм суміші газів дорівнює сумі парціальних об*ємів складових газів"],
+	correctAnswer: 0
+},
+{
+	text: "Ізопроцес -",
+	answers: ["процеси, перебіг яких відбувається при незмінному значенні двох із параметрів",
+		  "процеси, перебіг яких відбувається при незмінному значенні одного із параметрів",
+		  "процеси, перебіг яких відбувається при незмінному значенні жодного із параметрів"],
+	correctAnswer: 1
+},
+];
+
+var yourAns = new Array;
+var score = 0;
+
+function Engine(question, answer) {yourAns[question]=answer;}
+
+function Score(){
+   var answerText = "Результати:\n";
+   for(var i = 0; i < yourAns.length; ++i){
+	var num = i+1;
+	answerText=answerText+"\n    Запитання №"+ num +"";
+	if(yourAns[i]!=questions[i].correctAnswer){
+	    answerText=answerText+"\n    Правильна відповідь: " +
+		questions[i].answers[questions[i].correctAnswer] + "\n";
+	  }
+        else{
+	    answerText=answerText+": Правильно! \n";
+	    ++score;
+	    }
+       }
+
+   answerText=answerText+"\nВсього правильних відповідей: "+score+"\n";
+
+   alert(answerText);
+   yourAns = [];
+   score = 0;
+   clearForm("quiz");
+}
+function clearForm(name) {
+   var f = document.forms[name];
+   for(var i = 0; i < f.elements.length; ++i) {
+	if(f.elements[i].checked)
+		f.elements[i].checked = false;
+}
+}
+</script>
+
+<style>
+span.quest {font-weight: bold;}
+</style>
+
+<h1><script>document.write(title)</script></h1>
+<h2><script>document.write(subtitle)</script></h2>
+
+<form name="quiz">
+<ol>
+<script>
+for(var q=0; q<questions.length; ++q) {
+   var question = questions[q];
+   var idx = 1 + q;
+
+   document.writeln('<li><span class="quest">' + question.text + '</span><br/>');
+   for(var i in question.answers) {
+	document.writeln('<input type=radio name="q' + idx + '" value="' + i +
+	'" onClick="Engine(' + q + ', this.value)">' + question.answers[i] + '<br/>');
+}
+}
+</script>
+</ol>
+<input type="button" onClick="Score()" value="Перевірити результати" /> 
+        </div>
+        
+        
+      
+ </body>
+</html>
